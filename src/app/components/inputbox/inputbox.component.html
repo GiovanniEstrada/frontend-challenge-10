@@ -1,0 +1,12 @@
+<form (submit)="addMessage(message)">
+  <img [src]="linkImage" alt="" class="picture" />
+  <textarea
+    name=""
+    id=""
+    cols="30"
+    rows="10"
+    placeholder="Add a comment..."
+    #message
+  ></textarea>
+  <button className="btn btnSend">SEND</button>
+</form>

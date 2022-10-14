@@ -1,0 +1,9 @@
+<div class="body">
+  <div class="chatContainerMain">
+    <app-messages
+      [database]="message"
+      *ngFor="let message of messages[0]?.reverse()"
+    ></app-messages>
+  </div>
+  <app-inputbox></app-inputbox>
+</div>

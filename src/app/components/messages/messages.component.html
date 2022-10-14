@@ -1,0 +1,61 @@
+<div class="mainContainer">
+  <div class="reactions">
+    <div class="reactionContainer">
+      <img
+        src="../../../assets/images/icon-plus.svg"
+        (click)="increment(database)"
+        alt=""
+        class="plus"
+      />
+      <div class="counter">{{ database.reactions }}</div>
+      <img
+        src="../../../assets/images/icon-minus.svg"
+        (click)="decrement(database)"
+        alt=""
+        class="minus"
+      />
+    </div>
+  </div>
+  <div class="data">
+    <div class="info">
+      <div class="desc">
+        <img [src]="database.url" alt="" class="icon descItem" />
+        <h2 class="name descItem">{{ database.name }}</h2>
+        <div *ngIf="youMessage" class="youMessage descItem">YOU</div>
+        <h3 class="date descItem">{{ database.date }}</h3>
+      </div>
+      <div class="update" *ngIf="youMessage; else elseBlock">
+        <div class="deleteBtn" clickable>
+          <img
+            src="../../../assets/images/icon-delete.svg"
+            alt=""
+            class="replyImg"
+            (click)="deleteMessage(database._id)"
+          />
+          <h2 class="textReply" (click)="deleteMessage(database._id)">
+            Delete
+          </h2>
+        </div>
+        <div class="replyBtn">
+          <img
+            src="../../../assets/images/icon-edit.svg"
+            alt=""
+            class="replyImg"
+          />
+          <h2 class="textReply">Edit</h2>
+        </div>
+      </div>
+      <ng-template #elseBlock>
+        <div class="reply">
+          <img
+            src="../../../assets/images/icon-reply.svg"
+            alt=""
+            class="replyImg"
+          />
+          <h2 class="textReply">Reply</h2>
+        </div>
+      </ng-template>
+    </div>
+    <div class="content">{{ database.message }}</div>
+  </div>
+</div>

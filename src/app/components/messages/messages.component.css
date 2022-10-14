@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+}
+
+.mainContainer {
+    width: 735px;
+    height: auto;
+    min-height: 160px;
+    margin: 15px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    border-radius: 10px;
+}
+
+.reactions {
+    width: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.reactionContainer {
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 40px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: rgb(245, 246, 250);
+}
+
+.reactionContainer img {cursor: pointer;}
+
+.data {
+    display: grid;
+    grid-template-rows: 80px 1fr;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.desc {
+    display: flex;
+    grid: 10px;
+    width: 300px;
+}
+
+.descItem {
+    margin-right: 10px;
+}
+
+.reply {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+.reply:hover {
+    opacity: .5;
+}
+
+.replyImg {
+    width: 15px;
+    height: 15px;
+}
+
+.textReply {
+    font-size: 13px;
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 13px;
+    text-transform: lowercase;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.update {
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    transform: translate(-30px, 0);
+}
+
+.date {
+    font-size: 13px;
+    color: rgb(209, 213, 222);
+    margin-top: 5px;
+}
+
+.youMessage {
+    font-size: 13px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    width: 36px;
+    height: 20px;
+    background-color: rgb(86, 90, 190);
+}
+
+.content {
+    font-size: 13px;
+    color: #999;
+    margin-top: 5px;
+}
